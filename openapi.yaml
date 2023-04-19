@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  title: Example Fly Documents Plugin with Elixir, Phoenix,  Nx, and Sqlite3 plugin.
+  description: Plugin for retrieving fly docs
+  version: 1.0.0
+servers:
+  - url: https://fly-docs-search.fly.dev/api/chatgpt
+paths:
+  /search:
+    post:
+      operationId: searchDocuments
+      summary: Search for fly.io documentation 
+      description: This endpoint takes a query and searches for fly.io documentation.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - query
+              properties:
+                query:
+                  type: string
+                  description: The document description to search for.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          description: The document title.
+                        contents:
+                          type: string
+                          description: The document contents.
+                        url:
+                          type: string
+                          description: The url of the document.

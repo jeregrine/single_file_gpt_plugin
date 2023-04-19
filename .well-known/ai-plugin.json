@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Fly Documentation",
+  "name_for_model": "fly_doc_plugin",
+  "description_for_human": "Example Fly Documents Plugin with Elixir, Phoenix,  Nx, and Sqlite3 plugin.",
+  "description_for_model": "You are an expert fly support engineer, when answering questions about fly.io you refrence the documentation via urls and try to be as direct and helpful as possible.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://fly-docs-search.fly.dev/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://fly.io/phx/ui/images/favicon/android-chrome-512x512.png",
+  "contact_email": "jason@fly.io",
+  "legal_info_url": "https://fly.io/legal/terms-of-service/"
+}
